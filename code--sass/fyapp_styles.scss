@@ -1,0 +1,148 @@
+@import "sass/vars";
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,700&subset=greek");
+
+body {
+  background: $bgcolor;
+
+  overflow-x: auto;
+  font-family: "Roboto", Verdana, Arial, sans-serif !important;
+  font-size: 14px;
+  line-height: 1.2em;
+  text-rendering: optimizeLegibility;
+
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100% !important; // todo: remove this
+  min-width: 320px;
+  min-height: 320px;
+}
+
+.wrapper {
+  overflow-y: unset;
+  overflow-x: unset;
+}
+
+#fyapp-root {
+  font-size: $font-size;
+  width: 100%;
+  min-height: 100%;
+  background: #f8f8f8;
+}
+
+@import "sass/_react-dates-4yot";
+
+.fouryot.app {
+  @import "sass/_tables";
+  @import "sass/_menus";
+  @import "sass/forms/_forms";
+  @import "sass/_bootstrap_adminlte_tweaks";
+
+  @import "sass/_view_modules";
+
+  @import "sass/_components";
+
+  @import "sass/_app_layout";
+  //@import "sass/_colors";
+
+  @import "sass/_asset-availability-calendar";
+
+  font-size: 1em;
+  text-rendering: optimizeLegibility;
+  //font-family: "Helvetica Neue", "Source Sans Pro", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  .locked {
+    pointer-events: none;
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+}
+
+#fy-header {
+  //background: #5093bb;
+  padding: 0 0 0.2em;
+  //border-bottom: 1px solid #ddd;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .top-section {
+    width: 100%;
+  }
+}
+
+.geo-place-field.clickable {
+  cursor: pointer;
+  :hover {
+    opacity: 0.8;
+  }
+}
+
+.fancybox-content {
+  padding: 1.2em 2.4em;
+  h2 {
+    font-size: 1.8em;
+    margin: 0.2em 0;
+  }
+}
+
+// Further adminLTE customizations for 4yot specifically
+.app.admin .box {
+  .box-header {
+    background: #875996;
+  }
+}
+.app.expert .box {
+  .box-header {
+    background: #346667;
+  }
+}
+.app.member .box {
+}
+
+.blink {
+  animation: smooth-blink1 1000ms infinite;
+}
+
+@keyframes smooth-blink1 {
+  from {
+    opacity: 0.6;
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.6;
+  }
+}
+
+.right-align {
+  left: 0;
+  right: auto;
+}
+
+.presets-lane {
+  .btn.style01 {
+    margin: 0.2em;
+    font-size: 0.9em;
+    padding: 0.2em 0.4em;
+    border: 1px solid #66e2da;
+    background: none;
+  }
+  .btn.style01:hover {
+    opacity: 0.8;
+    color: #66e2da;
+  }
+  .btn.style01:active {
+    background: #66e2da;
+    color: #fff;
+  }
+}
